@@ -6,7 +6,7 @@ var player_deck = ['Tudor', 'Tudor', 'Tudor', 'Tudor', 'Tudor']
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$"./card_counter".text = str(player_deck.size())
 
 
 func draw_card():

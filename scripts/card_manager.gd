@@ -103,4 +103,5 @@ func get_card_with_highest_z_index(cards):
 	return highest_z_card
 
 func on_left_click_released():
-	print("card man left click released")
+	if card_being_dragged:
+		finish_drag()
