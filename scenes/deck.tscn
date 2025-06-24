@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd1kidwwdmcww"]
+
+[ext_resource type="Texture2D" uid="uid://tmdcv7ef7c6n" path="res://assets/test_card_back.png" id="1_0pdk6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ame5v"]
+size = Vector2(155, 210)
+
+[node name="deck" type="Node2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.186591, 0.186591)
+texture = ExtResource("1_0pdk6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ame5v")
+
+[node name="card_counter" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -9.0
+offset_top = -28.0
+offset_right = 31.0
+offset_bottom = 12.0
+scale = Vector2(2, 2)
+text = "0"
